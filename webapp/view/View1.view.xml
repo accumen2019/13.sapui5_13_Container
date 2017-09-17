@@ -1,9 +1,41 @@
-<mvc:View controllerName="ContainerLayoutContainerLayout.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+<mvc:View controllerName="ContainerLayoutContainerLayout.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+<!--				containter IconTabBar-->
+					<IconTabBar id="id1">
+						<items>
+							<IconTabFilter id="filter1" text="Tab1">
+								<Text text="Hello World"></Text>
+							</IconTabFilter>
+							<IconTabFilter id="filter2" text="Tab2">
+								<l:VerticalLayout width="100%">
+									<l:content>
+										<Panel>
+											<headerToolbar>
+												<Toolbar>
+													<Title level="H2" text="Layout Example"/>
+												</Toolbar>
+											</headerToolbar>
+											
+											
+<!--										FlexBox Layout inside Container-->
+											<FlexBox height="100px" alignItems="Start" justifyContent="Start">
+												<items>
+													<Button text="1" type="Emphasized" class="sapUiSmallMarginEnd"/>
+													<Button text="2" type="Reject" class="sapUiSmallMarginEnd"/>
+													<Button text="3" type="Accept" class="sapUiSmallMarginEnd"/>
+												</items>
+											</FlexBox>
+										</Panel>
+									</l:content>
+								</l:VerticalLayout>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
 			</Page>
 		</pages>
 	</App>
